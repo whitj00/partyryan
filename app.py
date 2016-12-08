@@ -23,7 +23,7 @@ def slack():
         return 'I need some text.', 200
 
     try:
-        out = partyryan.convert_str_to_emoji(text, space=(EN_SPACE * 2))
+        out = partyryan.convert_str_to_emoji(text, space=(EN_SPACE * 3))
         # because slack trims the beginning of messages now,
         # and unicode spaces don't help,
         # replace the first character with a period.
