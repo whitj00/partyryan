@@ -5,12 +5,8 @@ import itertools
 import os
 from all_characters import ALL_CHARACTERS
 
-PARTY_PARROTS = [
-    ':partyparrot:',
-    ':rightparrot:',
-    ':middleparrot:',
-    ':boredparrot:',
-    ':shuffleparrot:'
+PARTY_RYANS = [
+    ':ryan:'
 ]
 
 
@@ -36,15 +32,15 @@ def post_text_to_slack(output_string):
         return
 
     payload = {
-        'username': 'The Party Parrot',
-        'icon_emoji': ':partyparrot:',
+        'username': 'The Party Ryan',
+        'icon_emoji': ':ryan:',
         'text': output_string
     }
 
     return requests.post(os.environ['SHITPOSTING_ENDPOINT'], data=json.dumps(payload))
 
 
-def convert_str_to_emoji(s, emojis=PARTY_PARROTS, space=' ', force=False):
+def convert_str_to_emoji(s, emojis=PARTY_RYANS, space=' ', force=False):
 
     emoji_iterator = itertools.cycle(emojis)
 
@@ -60,7 +56,7 @@ def convert_str_to_emoji(s, emojis=PARTY_PARROTS, space=' ', force=False):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('text', help='The text to emoji-fy')
-    parser.add_argument('-e', '--emojis', nargs='+', help='List of emojis to use.', default=PARTY_PARROTS)
+    parser.add_argument('-e', '--emojis', nargs='+', help='List of emojis to use.', default=PARTY_RYANS)
     parser.add_argument('-f', '--force', action='store_true', help='automatically post to the slack of your choosing', default=False)
     parser.add_argument('-s', '--space', default='        ')
 
