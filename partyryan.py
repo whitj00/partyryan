@@ -9,7 +9,6 @@ PARTY_RYANS = [
     ':ryan:'
 ]
 
-
 def arr_to_str(c, s, space):
     if c == ' ':
         return '\n\n\n\n\n\n\n\n'
