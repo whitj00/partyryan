@@ -1,6 +1,7 @@
 {
   "name": "partyryan",
-  "description": "🎉🐦 Very Serious Code™️ that generates a slack-compatible emoji representation of english words.",
+  "description": "ryan",
   "repository": "https://github.com/whitj00/partyryan",
-  "keywords": ["partyryan", "shitposting", "slack"]
+  "logo": "https://node-js-sample.herokuapp.com/node.png",
+  "keywords": ["partyryan", "slack"]
 }
